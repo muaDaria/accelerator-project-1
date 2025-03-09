@@ -1,0 +1,13 @@
+.card {
+  @include list__reset;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.card__item {
+  padding: 50px 40px;
+  background-color: $color-base-white;
+  text-align: center;
+
+}
