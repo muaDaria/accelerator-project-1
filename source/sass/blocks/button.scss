@@ -7,21 +7,33 @@
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
+  background-color: transparent;
   color: $color-base-black;
-  border: 2px solid $color-background-dark;
+  border: 2px solid $color-base-black;
   cursor: pointer;
 }
 
-.button:hover,
+.button:hover {
+  color: $color-base-white;
+  background-color: $color-hover-gradient;
+  border: none;
+}
+
 .button:focus {
-  background-color: $color-hover;
+  color: $color-base-white;
+  background-color: $color-hover-gradient;
+  border: 2px solid $color-focus;
   outline: none;
 }
 
 .button:active {
-  background-color: $color-active;
+  color: $color-base-white;
+  background-color: $color-hover-gradient;
+  opacity: 0.7;
+  border: none;
 }
 
 button:disabled {
-  background-color: $color-disabled;
+  opacity: 0.3;
+  letter-spacing: 0.05em;
 }
