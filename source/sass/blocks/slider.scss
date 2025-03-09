@@ -1,0 +1,220 @@
+/*.slider__container {
+  display: grid;
+  padding: 0 20px;
+  grid-template-rows: repeat(5, auto);
+
+  @media (min-width: $tablet-width) {
+    grid-template-rows: auto auto auto auto 286px auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: auto auto;
+    column-gap: 30px;
+    grid-template-rows: 180px auto auto auto auto auto;
+    padding: 0 80px;
+  }
+}
+
+.slider__button {
+  position: absolute;
+  content: "";
+  padding: 0;
+  top: 0;
+  z-index: 10px;
+  width: 20px;
+  height: 100%;
+  left: 0;
+  background-color: transparent;
+  background-image: url("../../icons/stack.svg#slider-next");
+  background-size: 11px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    max-height: 640px;
+    width: 80px;
+  }
+}
+
+.slider__button-prev {
+  left: auto;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.slider__button:hover,
+.slider__button:focus {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), url("../../icons/stack.svg#slider-next");
+  background-size: cover, 11px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider__button:active {
+  background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%), url("../../icons/stack.svg#slider-next");
+  background-size: cover, 11px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider__button:disabled {
+  background-color: transparent;
+}
+
+.slider__badge {
+  grid-row: 2/3;
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    grid-row: 1/2;
+    grid-column: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    padding-top: 0;
+  }
+}
+
+.slider__title {
+  font-size: 36px;
+  line-height: 48px;
+  grid-row: 3/4;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    grid-row: 2/3;
+    margin-bottom: 16px;
+    font-size: 56px;
+    line-height: 80px;
+    grid-column: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+}
+
+.slider__description {
+  margin-top: 0;
+  margin-bottom: 20px;
+  grid-row: 4/5;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-row: 3/4;
+    font-size: 20px;
+    line-height: 32px;
+    padding: 0 5px;
+    grid-column: auto;
+
+    br {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    grid-row: 4/5;
+    grid-column: 2/3;
+    width: 625px;
+  }
+}
+
+.slider__price {
+  grid-row: 5/6;
+
+  @media (min-width: $tablet-width) {
+    grid-row: 4/5;
+    margin-bottom: 20px;
+    grid-column: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 5/6;
+    grid-column: 2/3;
+  }
+}
+
+.slider__image-wrapper {
+  padding-top: 20px;
+  grid-row: 1/2;
+  text-align: center;
+  margin-bottom: 10px;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    grid-row: 5/7;
+    padding-top: 0;
+    justify-self: center;
+    margin-bottom: 0;
+    grid-column: auto;
+    z-index: 10;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 1/7;
+    padding-left: 25px;
+    padding-top: 30px;
+    width: 625px;
+    display: flex;
+    justify-content: start;
+  }
+}
+
+.slider__image {
+  display: block;
+  width: 280px;
+  height: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+    max-width: none;
+  }
+}
+
+.slider__pagination {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    @include list__reset;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding-bottom: 60px;
+  }
+}
+
+.slider__pagination-button {
+  width: 62px;
+  height: 4px;
+  margin: 0;
+  padding: 0;
+  background-color: $color-base-white;
+  border-radius: 0;
+}
+
+.slider__pagination-button--current {
+  background-color: $color-primary;
+}
+
+.slider__pagination-button:hover,
+.slider__pagination-button:focus {
+  background-color: $color-primary;
+  opacity: 0.25;
+}
+*/

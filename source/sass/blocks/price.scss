@@ -1,0 +1,33 @@
+.price {
+  padding: 0 25px 60px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+    padding-top: 20px;
+  }
+}
+
+.price__old {
+  font-size: 16px;
+  line-height: 32px;
+  color: $color-primary;
+  margin-right: 7px;
+}
+
+.price__new {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+  margin-right: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 22px;
+  }
+}
