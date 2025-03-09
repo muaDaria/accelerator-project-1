@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" data-validate="html">
+<html class="page" lang="ru" data-validate="html">
 
   <head>
     <meta charset="UTF-8">
@@ -8,16 +8,12 @@
     <link rel="stylesheet" href="sass/style.scss">
   </head>
 
-  <body class="page-body">
+  <body class="page__body">
     <header class="hero" data-test="hero">
       <div class="hero__wrapper">
         <div class="hero__header">
           <div class="hero__logo-wrapper">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170" height="36" type="image/svg+xml">
-              <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="82" height="36" type="image/svg+xml">
-              <img src="images/logo-mobile.svg" width="32" height="36" alt="SUPERGYM">
-            </picture>
+            <img src="/__spritemap#logo" width="100" height="20" alt="SUPERGYM">
           </div>
           <a class="hero__contacts-phone" href="tel:88005555555">8 (800) 555-55-55</a>
         </div>
