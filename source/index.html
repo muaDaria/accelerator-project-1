@@ -13,7 +13,7 @@
       <div class="hero__wrapper">
         <div class="hero__header">
           <div class="hero__logo-wrapper">
-            <img src="/__spritemap#logo" width="100" height="20" alt="SUPERGYM">
+            <img src="/__spritemap#sprite-logo-view" width="100" height="20" alt="SUPERGYM">
           </div>
           <a class="hero__contacts-phone" href="tel:88005555555">8 (800) 555-55-55</a>
         </div>
@@ -77,32 +77,53 @@
         <h2 class="price__title title">Абонементы</h2>
         <ul class="price__filter filter">
           <li class="filter__item">
-            <button class="filter__button filter__button--active" type="button">1 месяц</button>
+            <button class="filter__button filter__button--active" type="button" data-months="1">1 месяц</button>
           </li>
           <li class="filter__item">
-            <button class="filter__button" type="button">6 месяцев</button>
+            <button class="filter__button" type="button" data-months="6">6 месяцев</button>
           </li>
           <li class="filter__item">
-            <button class="filter__button" type="button">12 месяцев</button>
+            <button class="filter__button" type="button" data-months="12">12 месяцев</button>
           </li>
         </ul>
         <ul class="price__card card">
           <li class="card__item">
             <h3 class="card__title title">С тренером</h3>
             <p class="card__description">12 занятий</p>
-            <p class="card__price">5000<span>₽</span></p>
+            <div class="card__wrapper">
+              <p class="card__price" data-price-1="5000" data-price-6="30000" data-price-12="60000">5000</p>
+              <span class="card__price-shadow" aria-hidden="true">5000</span>
+              <span class="visually-hidden">Рублей</span>
+              <svg width="24" height="33" role="img" fill="#102654">
+                <use href="/__spritemap#sprite-ruble"></use>
+              </svg>
+            </div>
             <a class="card__button button" href="#">Купить абонемент</a>
           </li>
           <li class="card__item">
             <h3 class="card__title title">Дневной</h3>
             <p class="card__description">с 8:00 до 17:00</p>
-            <p class="card__price">1700<span>₽</span></p>
+            <div class="card__wrapper">
+              <p class="card__price" data-price-1="1700" data-price-6="10200" data-price-12="20400">1700</p>
+              <span class="card__price-shadow" aria-hidden="true">1700</span>
+              <span class="visually-hidden">Рублей</span>
+              <svg width="24" height="33" role="img" fill="#102654">
+                <use href="/__spritemap#sprite-ruble"></use>
+              </svg>
+            </div>
             <a class="card__button button" href="#">Купить абонемент</a>
           </li>
           <li class="card__item">
             <h3 class="card__title title">Полный день</h3>
             <p class="card__description">с 8:00 до 22:00</p>
-            <p class="card__price">2700<span>₽</span></p>
+            <div class="card__wrapper">
+              <p class="card__price" data-price-1="2700" data-price-6="16200" data-price-12="32400">2700</p>
+              <span class="card__price-shadow" aria-hidden="true">2700</span>
+              <span class="visually-hidden">Рублей</span>
+              <svg width="24" height="33" role="img" fill="#102654">
+                <use href="/__spritemap#sprite-ruble"></use>
+              </svg>
+            </div>
             <a class="card__button button" href="#">Купить абонемент</a>
           </li>
         </ul>

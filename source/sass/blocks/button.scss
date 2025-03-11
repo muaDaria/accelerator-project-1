@@ -1,5 +1,5 @@
 .button {
-  padding: 25px 47px;
+  padding: 25px 43px;
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   font-size: 12px;
@@ -16,7 +16,6 @@
 .button:hover {
   color: $color-base-white;
   background-color: $color-hover-gradient;
-  border: none;
 }
 
 .button:focus {
@@ -29,7 +28,6 @@
 .button:active {
   color: $color-base-white;
   background-color: $color-hover-gradient;
-  opacity: 0.7;
   border: none;
 }
 
