@@ -1,0 +1,27 @@
+.date__name {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 16px;
+  line-height: 20px;
+  border-bottom: 1px solid;
+}
+
+.date__content {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 5px;
+}
+
+.date__time {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.date__info {
+  margin: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+}

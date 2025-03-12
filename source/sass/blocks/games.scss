@@ -1,0 +1,46 @@
+.games__wrapper {
+  padding: 25px 15px;
+  @include wrapper__size;
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+    padding-top: 20px;
+  }
+}
+
+.games__news {
+  padding: 40px;
+  background-color: $color-banner;
+  color: $color-base-white;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.games__content {
+  display: flex;
+  gap: 37px;
+}
+
+.games__title {
+  font-size: 48px;
+  line-height: 64px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.games__description {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.games__button {
+  color: $color-base-white;
+  border-color: $color-base-white;
+}
