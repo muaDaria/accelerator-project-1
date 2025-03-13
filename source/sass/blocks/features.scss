@@ -1,155 +1,93 @@
-.advantages {
-  padding-top: 50px;
-  padding-bottom: 60px;
-
-  @media (min-width: $tablet-width) {
-    padding-top: 60px;
-    padding-bottom: 100px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 100px;
-  }
-}
-
-.advantages__wrapper {
+.features__wrapper {
   @include wrapper__size;
-  text-align: center;
+  padding: 40px 15px;
 
-  @media (min-width: $tablet-width) {
-    width: $tablet-width;
-    padding: 0 30px;
-  }
+ @media (min-width: $tablet-width) {
+   justify-content: center;
+   padding: 0;
+ }
 
-  @media (min-width: $desktop-width) {
-    width: $desktop-width;
-    padding: 0 40px;
-  }
+ @media (min-width: $desktop-width) {
+   justify-content: start;
+   padding-top: 20px;
+ }
 }
 
-.advantages__list {
+.features__title {
+  margin-bottom: 40px;
+}
+
+.features__list {
   @include list__reset;
-  display: grid;
-  gap: 42px;
+  display: flex;
   text-align: center;
-
-  @media (min-width: $tablet-width) {
-    grid-template-columns: repeat(2, 339px);
-    gap: 30px;
-    row-gap: 50px;
-    text-align: left;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-template-columns: 318px 317px 318px 317px;
-    text-align: center;
-    justify-content: space-between;
-  }
+  flex-direction: column;
+  gap: 35px;
 }
 
-.advantages__item {
-  @media (min-width: $tablet-width) {
-    padding-left: 72px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-left: 0;
-  }
+.features__item span {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 64px;
+  background: linear-gradient(127.61deg, #D10A42 0%, #0041CA 45.58%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.advantages__badge {
-  margin-bottom: 4px;
+.features__item span + p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2e35ac;
 }
 
-.advantages__title {
-  margin-bottom: 46px;
-
-  @media (min-width: $tablet-width) {
-    font-size: 42px;
-    line-height: 64px;
-    margin-bottom: 60px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 80px;
-  }
+.features__item h3 {
+  margin: 12px 0;
 }
 
-.advantages__heading {
-  font-size: 18px;
-  line-height: 32px;
+.features__item h3 + p {
+  margin: 0;
+  padding: 0 30px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  color: $color-base-black;
+}
+
+.features__item h3 + p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.features__content {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  background-color: $color-background-dark;
+  color: $color-base-white;
   position: relative;
-  margin-bottom: 4px;
 
+  &::after,
   &::before {
     content: "";
-    position: relative;
-    left: 115px;
-    bottom: 10px;
-    display: block;
-    height: 56px;
-    background-repeat: no-repeat;
-    background-position: center;
+    position: absolute;
+    height: 100%;
+    width: 800%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: $color-background-dark;
   }
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 10px;
-    font-size: 24px;
-    line-height: 36px;
-
-    &::before {
-      position: absolute;
-      left: -71px;
-      top: 0;
-      bottom: 0;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    &::before {
-      position: relative;
-      left: 141px;
-    }
+  &::after {
+    left: 0;
   }
 }
 
-.advantages__description {
-  margin: 0;
-
-  @media (min-width: $tablet-width) {
-    font-size: 16px;
-    line-height: 24px;
-
-    br {
-      display: none;
-    }
-  }
+.features__content span {
+  -webkit-text-fill-color: $color-base-white;
 }
 
-.advantages__item--speed .advantages__heading {
-  &::before {
-    width: 50px;
-    background-image: url("../../icons/stack.svg#speed");
-  }
-}
-
-.advantages__item--fit .advantages__heading {
-  &::before {
-    width: 52px;
-    background-image: url("../../icons/stack.svg#fit");
-  }
-}
-
-.advantages__item--energy .advantages__heading {
-  &::before {
-    width: 42px;
-    background-image: url("../../icons/stack.svg#energy");
-  }
-}
-
-.advantages__item--eco .advantages__heading {
-  &::before {
-    width: 46px;
-    background-image: url("../../icons/stack.svg#eco");
-  }
+.features__content h3 + p {
+  color: $color-base-white;
 }

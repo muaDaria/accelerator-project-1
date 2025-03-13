@@ -1,6 +1,6 @@
 .games__wrapper {
-  padding: 25px 15px;
-  @include wrapper__size;
+   @include wrapper__size;
+   padding: 25px 15px;
 
   @media (min-width: $tablet-width) {
     justify-content: center;
@@ -43,4 +43,8 @@
 .games__button {
   color: $color-base-white;
   border-color: $color-base-white;
+}
+
+.games__image-wrapper img {
+  display: block;
 }
