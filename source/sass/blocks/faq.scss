@@ -1,0 +1,73 @@
+.faq__wrapper {
+  @include wrapper__size;
+  padding: 70px 15px;
+
+ @media (min-width: $tablet-width) {
+   //justify-content: center;
+   //padding: 0;
+ }
+
+ @media (min-width: $desktop-width) {
+   //justify-content: start;
+   //padding-top: 20px;
+ }
+}
+
+.faq__title {
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.faq__topic-list {
+  @include list__reset;
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 10px;
+}
+
+.faq__topic-button {
+  width: 100%;
+  padding: 14px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: none;
+  border: 1px solid rgba(16, 38, 84, 0.2);
+}
+
+.faq__topic-button--active {
+  color: $color-base-white;
+  border: none;
+  padding: 15px 20px;
+  background: $color-hover-gradient;
+  cursor: default;
+}
+
+.faq__topic-button:hover,
+.faq__topic-button:focus {
+  color: $color-base-black;
+  border: 1px solid $color-base-black;
+}
+
+.faq__topic-button:active {
+  color: $color-base-white;
+  border: none;
+  padding: 15px 20px;
+  background: $color-hover-gradient;
+}
+
+.faq__topic-button:disabled {
+  color: #c8c9cc;
+  border: 1px solid rgba(16, 38, 84, 0.2);
+}
+
+.faq__topic-button--active:focus {
+  color: $color-base-white;
+  padding: 14px 20px;
+  border: 1px solid $color-base-black;
+}
+
+.faq__topic-button--active:hover {
+  border: none;
+  color: $color-base-white;
+}

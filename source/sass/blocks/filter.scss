@@ -27,15 +27,6 @@
   }
 }
 
-.filter__button--active {
-  position: relative;
-  opacity: 1;
-
-  &::after {
-    background-color: #d10a42;
-  }
-}
-
 .filter__button:hover {
   opacity: 0.7;
 
@@ -68,5 +59,23 @@
   &::after {
     background-color: $color-base-black;
     opacity: 0.3;
+  }
+}
+
+.filter__button--active {
+  position: relative;
+  opacity: 1;
+  cursor: default;
+
+  &::after {
+    background-color: #d10a42;
+  }
+}
+
+.filter__button--active:hover {
+  opacity: 1;
+
+  &::after {
+    background-color: #d10a42;
   }
 }

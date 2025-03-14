@@ -84,3 +84,7 @@
   background-color: $color-hover-gradient;
   opacity: 1;
 }
+
+.card__button:disabled {
+  letter-spacing: 0.05em;
+}
