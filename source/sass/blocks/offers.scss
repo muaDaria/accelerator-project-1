@@ -123,10 +123,14 @@
   border-image-source: $color-focus-card;
   border-image-slice: 1;
   padding: 20px;
-  color: $color-background-dark;
+  color: $color-background-dark;;
 }
 
-.offers__item h3 {
+.offers__content {
+  margin-bottom: 20px;
+}
+
+.offers__content h3 {
   margin: 0;
   font-weight: 700;
   font-size: 22px;
@@ -134,9 +138,12 @@
   margin-bottom: 20px;
 }
 
-.offers__item p {
-  margin-top: 0;
-  margin-bottom: 20px;
+.offers__content p {
+  margin: 0;
+}
+
+.offers__item p:not(:last-child){
+  margin-bottom: 8px;
 }
 
 .offers__button--dark {
