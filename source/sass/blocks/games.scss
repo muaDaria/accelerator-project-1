@@ -45,6 +45,30 @@
   border-color: $color-base-white;
 }
 
+.games__button:hover {
+  color: $color-text-secondary;
+  background-color: $color-base-white;
+}
+
+.games__button:focus {
+  color: $color-text-secondary;
+  background-color: $color-base-white;
+  opacity: 0.8;
+  outline: none;
+}
+
+.button:active {
+  color: $color-base-black;
+  background-color: $color-base-white;
+  border: 2px solid $color-base-white;
+  opacity: 1;
+}
+
+button:disabled {
+  opacity: 0.5;
+  letter-spacing: 0;
+}
+
 .games__image-wrapper img {
   display: block;
 }

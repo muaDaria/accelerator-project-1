@@ -1,3 +1,7 @@
+.features {
+  overflow: hidden;
+}
+
 .features__wrapper {
   @include wrapper__size;
   padding: 40px 15px;

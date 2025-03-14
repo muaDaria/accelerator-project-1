@@ -1,0 +1,167 @@
+.offers {
+  //overflow: hidden;
+}
+
+.offers__title {
+  padding-bottom: 40px;
+}
+
+.offers__price {
+  padding: 30px 0;
+  text-align: center;
+  background-color: $color-banner;
+  color: $color-base-white;
+  position: relative;
+
+  /*&::after,
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 800%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: $color-banner;
+  }
+
+  &::after {
+    left: 0;
+  }*/
+}
+
+.offers__price h3 {
+  margin: 0 auto 9px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  text-align: center;
+  width: 260px;
+}
+
+.offers__price span {
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 64px;
+  width: 260px;
+}
+
+.offers__price p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 28px auto;
+  width: 260px;
+}
+
+.offers__button {
+  padding: 0 0 5px;
+  color: $color-base-white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 1px solid $color-base-white;
+}
+
+.offers__button:hover {
+  opacity: 0.8;
+}
+
+.offers__button:focus {
+  border: 1px solid $color-base-white;
+  padding: 10px;
+}
+
+.offers__button:active {
+  color: $color-base-white;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $color-base-white;
+  opacity: 1;
+  padding: 0 0 5px;
+}
+
+.offers__button:disabled {
+  opacity: 0.5;
+  letter-spacing: normal;
+}
+
+.offers__image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.offers__card {
+  @include wrapper__size;
+  padding: 40px 15px;
+
+ @media (min-width: $tablet-width) {
+   //justify-content: center;
+   //padding: 0;
+ }
+
+ @media (min-width: $desktop-width) {
+   //justify-content: start;
+   //padding-top: 20px;
+ }
+}
+
+.offers__list {
+  @include list__reset;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.offers__item {
+  text-align: center;
+  border: 7px solid transparent;
+  border-image-source: $color-focus-card;
+  border-image-slice: 1;
+  padding: 20px;
+  color: $color-background-dark;
+}
+
+.offers__item h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+
+.offers__item p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.offers__button--dark {
+  color: $color-background-dark;
+  border-bottom: 1px solid #74819c;
+  align-self: center;
+}
+
+.offers__button--dark:hover {
+  color: $color-background-dark;
+}
+
+.offers__button--dark:focus {
+  color: $color-background-dark;
+  border: 1px solid $color-background-dark;
+}
+
+.offers__button--dark:active {
+  color: $color-background-dark;
+  border: none;
+  border-bottom: 1px solid $color-background-dark;
+}
+
+.offers__button--dark:disabled {
+  color: $color-background-dark;
+  opacity: 0.3;
+  letter-spacing: normal;
+}
