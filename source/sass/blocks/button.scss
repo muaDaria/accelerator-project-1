@@ -34,3 +34,14 @@
 button:disabled {
   opacity: 0.3;
 }
+
+
+
+/*/добавить класс с модификатором --disabled
+//для отключения ссылки
+
+.footer__link--disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.4;
+}*/

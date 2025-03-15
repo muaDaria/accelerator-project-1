@@ -1,12 +1,13 @@
-.main-footer {
-  overflow: hidden;
+.footer {
+  background-color: $color-background-footer;
 }
 
-.main-footer__wrapper {
+.footer__wrapper {
   @include wrapper__size;
+  padding: 40px 15px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 30px;
+  gap: 30px;
 
   @media (min-width: $tablet-width) {
     width: $tablet-width;
@@ -19,103 +20,37 @@
   }
 }
 
-.main-footer__group {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    padding-top: 9px;
-    gap: 30px;
-  }
-}
-
-.main-footer__contacts {
-  padding: 20px 0;
+.footer__list {
+  @include list__reset;
   display: flex;
-  justify-content: space-between;
-
-  @media (min-width: $tablet-width) {
-    padding-top: 42px;
-  }
-
-  @media (min-width: $desktop-width) {
-    flex-direction: column;
-    justify-content: normal;
-    padding-top: 0;
-    padding-bottom: 0;
-    gap: 50px;
-    min-width: 318px;
-  }
+  flex-wrap: wrap;
+  column-gap: 35px;
+  row-gap: 20px;
 }
 
-.main-footer__logo {
+.footer__link {
+  color: $color-base-white;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
   text-decoration: none;
-  display: block;
 }
 
-.main-footer__logo-image {
-  width: 82px;
-  height: 36px;
-
-  @media (min-width: $tablet-width) {
-    width: 170px;
-    height: 36px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 5px;
-  }
+.footer__link:hover {
+  border-bottom: 1px solid $color-base-white;
+  padding-bottom: 5px;
 }
 
-.main-footer__logo-text {
-  display: none;
-
-  @media (min-width: $desktop-width) {
-    display: block;
-    margin: 0;
-    color: $color-base-black;
-  }
+.footer__link:focus {
+  outline: 1px solid $color-base-white;
+  outline-offset: 10px;
 }
 
-.main-footer__logo-image:hover,
-.main-footer__logo-image:focus {
-  opacity: 0.8;
-}
+//добавить класс с модификатором --disabled
+//для отключения ссылки
 
-.main-footer__logo-image:active {
-  opacity: 0.6;
-}
-
-.mai-footer__logo-text:hover,
-.mai-footer__logo-text:focus {
-  color: $color-hover;
-}
-
-.mai-footer__logo-text:active {
-  color: $color-active;
-}
-
-.main-footer__social {
-  max-width: 160px;
-
-  @media (min-width: $tablet-width) {
-    max-width: 300px;
-  }
-}
-
-.main-footer__copyright {
-  padding: 20px 37px 0;
-
-  @media (min-width: $tablet-width) {
-    padding-top: 8px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 15px;
-  }
-}
-
-.main-footer__container {
-  @media (min-width: $desktop-width) {
-    display: flex;
-    gap: 30px;
-  }
+.footer__link--disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.4;
 }

@@ -42,7 +42,7 @@
 
 .contacts__link:focus-visible {
   outline: 1px solid $color-base-black;
-  opacity: 0.8;
+  outline-offset: 5px;
 }
 
 .contacts__link:active {

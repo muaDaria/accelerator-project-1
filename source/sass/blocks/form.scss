@@ -69,8 +69,7 @@
 }
 
 .form__field:focus {
-  padding: 3px 9px 3px 3px;
-  border: 1px solid $color-base-white;
+  outline: 1px solid $color-base-white;
   background-color: transparent;
 }
 

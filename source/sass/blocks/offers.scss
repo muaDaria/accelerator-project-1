@@ -71,8 +71,9 @@
 }
 
 .offers__button:focus {
-  border: 1px solid $color-base-white;
+  outline: 1px solid $color-base-white;
   padding: 10px;
+  border: none;
 }
 
 .offers__button:active {
@@ -86,7 +87,6 @@
 
 .offers__button:disabled {
   opacity: 0.5;
-  letter-spacing: normal;
 }
 
 .offers__image-wrapper img {
@@ -158,7 +158,7 @@
 
 .offers__button--dark:focus {
   color: $color-background-dark;
-  border: 1px solid $color-background-dark;
+  outline: 1px solid $color-background-dark;
 }
 
 .offers__button--dark:active {
