@@ -305,20 +305,22 @@
 
     <section class="form" data-test="form">
       <div class="form__wrapper">
+        <div class="form__container">
         <h2 class="form__title title">Бесплатное занятие</h2>
-        <form class="form__container" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="form__group" action="https://echo.htmlacademy.ru" method="post">
           <div class="form__content">
-            <label class="form__label" for="name">Имя</label>
-            <input class="form__field" type="text" id="name" name="name" value="Имя" placeholder="Иван Иванов" required>
+            <label for="name"></label>
+            <input class="form__field" aria-label="Имя" type="text" id="name" name="name" placeholder="Имя" required>
               <!-- При ошибке валидации добавить к классу .form__content класс .form__error -->
           </div>
           <div class="form__content">
-            <label class="form__label" for="phone">Телефон</label>
-            <input class="form__field" type="tel" id="phone" name="phone" value="Телефон" placeholder="Ваш телефон" required>
+            <label class="form__label" for="phone"></label>
+            <input class="form__field" aria-label="Телефон" type="tel" id="phone" name="phone" pattern="^\[1-9]{10}$" placeholder="Телефон" required>
             <!-- При ошибке валидации добавить к классу .form__content класс .form__error -->
           </div>
           <button class="form__button button" type="submit">Отправить</button>
         </form>
+        </div>
 
         <div class="form__contacts contacts">
           <h2 class="contacts__title title">Контакты</h2>

@@ -1,6 +1,6 @@
 .reviews__wrapper {
-  padding: 40px;
   @include wrapper__size;
+  padding: 40px;
 
   @media (min-width: $tablet-width) {
     justify-content: center;
@@ -20,6 +20,9 @@
 .reviews__item {
   padding: 30px 25px;
   text-align: center;
+  color: $color-base-white;
+  background-color: $color-background-dark;
+  box-shadow: 0px 0px 40px 0px rgba(28, 51, 116, 0.2);
 }
 
 .reviews__item h3 {

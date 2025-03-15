@@ -57,14 +57,14 @@
   outline: none;
 }
 
-.button:active {
+.games__button:active {
   color: $color-base-black;
   background-color: $color-base-white;
   border: 2px solid $color-base-white;
   opacity: 1;
 }
 
-button:disabled {
+.games__button:disabled {
   opacity: 0.5;
   letter-spacing: 0;
 }
