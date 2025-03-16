@@ -3,8 +3,8 @@
 }
 
 .price__wrapper {
-  padding: 40px 15px;
   @include wrapper__size;
+  padding: 40px 15px;
 
   @media (min-width: $tablet-width) {
     justify-content: center;

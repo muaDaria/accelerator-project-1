@@ -1,6 +1,6 @@
 import { isEnterKey } from './util.js';
 
-const playButton = document.getElementById('playButton');
+const playButton = document.querySelector('.about__play-button');
 const videoContainer = document.querySelector('.about__video');
 
 const videoUrl = 'https://www.youtube.com/embed/watch?v=9TZXsZItgdw?autoplay=1';
