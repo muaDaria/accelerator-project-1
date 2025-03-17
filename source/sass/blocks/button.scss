@@ -21,8 +21,8 @@
 .button:focus {
   color: $color-base-white;
   background-color: $color-hover-gradient;
-  border: 2px solid $color-focus;
-  outline: none;
+  outline: 2px solid $color-focus;
+  border: none;
 }
 
 .button:active {
