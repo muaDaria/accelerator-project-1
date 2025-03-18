@@ -246,8 +246,8 @@ button:disabled {
 
   @media (min-width: $tablet-width) {
     display: block;
-    width: 324px;
-    height: 390px;
+    min-width: 324px;
+    min-height: 390px;
   }
 
   @media (min-width: $desktop-width) {
