@@ -233,7 +233,6 @@
 .button:active {
   color: $color-base-black;
   background-color: $color-base-white;
-  border: none;
   opacity: 1;
 }
 
@@ -246,8 +245,8 @@ button:disabled {
 
   @media (min-width: $tablet-width) {
     display: block;
-    min-width: 324px;
-    min-height: 390px;
+    width: 324px;
+    height: 390px;
   }
 
   @media (min-width: $desktop-width) {

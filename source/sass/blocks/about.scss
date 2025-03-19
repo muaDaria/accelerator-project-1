@@ -4,7 +4,8 @@
 
   @media (min-width: $tablet-width) {
     width: $tablet-width;
-    padding: 50px 45px 120px;
+    margin: 0 auto;
+    padding: 60px 45px 120px;
     text-align: center;
     position: relative;
   }
@@ -22,15 +23,17 @@
   padding: 0 15px;
 
   @media (min-width: $tablet-width) {
-    width: auto;
-    margin: 0;
-    padding: 0 90px;
+    width: 502px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0;
     width: 355px;
     margin-right: 145px;
+    text-align: left;
   }
 }
 
@@ -175,15 +178,20 @@
     min-width: 270px;
     min-height: 170px;
     position: absolute;
-    left: 250px;
+    left: 249px;
     bottom: 35px;
 
     &::after,
     &::before {
-      width: 270px;
       left: 0;
       top: 0;
       z-index: 1;
+    }
+
+    &::before {
+      width: 270px;
+      height: 170px;
+      background-size: cover;
     }
   }
 
@@ -267,6 +275,7 @@
 
 .about__play-button:focus {
   border: 2px solid $color-base-black;
+  outline: none;
 
   &::before {
     background: $color-focus-play;
