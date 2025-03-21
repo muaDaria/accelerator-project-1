@@ -3,6 +3,43 @@
   display: flex;
   flex-direction: column;
   gap: 35px;
+
+  @media (min-width: $tablet-width) {
+    gap: 40px;
+    z-index: 1;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 275px;
+      height: 328px;
+      background-image: image-set(
+        url("../../img/price@1x.png") 1x,
+        url("../../img/price@2x.png") 2x,
+        url("../../img/price@1x.webp") 1x,
+        url("../../img/price@2x.webp") 2x,
+      );
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: rotate(150deg);
+      right: -209px;
+      bottom: -49px;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    gap: 40px;
+
+    &::before {
+      width: 321px;
+      height: 384px;
+      right: -195px;
+      bottom: -95px;
+    }
+  }
 }
 
 .card__item {
@@ -13,6 +50,16 @@
   flex-direction: column;
   align-items: center;
   gap: 18px;
+
+  @media (min-width: $tablet-width) {
+    padding: 65px;
+    gap: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 17px;
+    width: 360px;
+  }
 }
 
 .card__item:hover {
@@ -20,13 +67,19 @@
   border-image-source: $color-focus-card;
   border-image-slice: 1;
   padding: 43px 35px;
+
+  @media (min-width: $tablet-width) {
+    padding: 58px;
+  }
 }
 
 .card__item:hover .card__button {
   background: $color-hover-gradient;
   color: $color-base-white;
   border: none;
-  padding: 27px 45px;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
 }
 
 .card__title {
@@ -34,10 +87,25 @@
   font-weight: 700;
   font-size: 22px;
   line-height: 22px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+    line-height: 26px;
+  }
 }
 
 .card__description {
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .card__price {
@@ -49,6 +117,11 @@
   margin-bottom: 0;
   z-index: 1;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    margin-right: 13px;
+  }
 }
 
 .card__price-shadow {
@@ -58,6 +131,10 @@
   line-height: 150%;
   color: #e8e8e8;
   top: -20;
+
+  @media (min-width: $tablet-width) {
+    font-size: 100px;
+  }
 }
 
 .card__wrapper {
@@ -71,12 +148,23 @@
   width: 24px;
   height: 33px;
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: 42px;
+  }
+}
+
+.card__button {
+  width: 100%;
 }
 
 .card__button:focus {
   background: $color-hover-gradient;
   opacity: 0.8;
-  border-color: $color-focus;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  outline: none;
 }
 
 .card__button:active {
