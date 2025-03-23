@@ -16,7 +16,7 @@ new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 
-  Mousewheel: {
+  mousewheel: {
     forceToAxis: true,
   },
   //scrollbar: {

@@ -89,3 +89,29 @@
 .slider__content:focus .slider__skills {
   display: block;
 }
+
+.slider__content:hover {
+  @media (min-width: $desktop-width) {
+    &::before {
+      position: absolute;
+      content: '';
+      width: 260px;
+      height: 300px;
+      background-color: $color-base-black;
+      opacity: 0.89;
+    }
+  }
+}
+
+.slider__content:hover .slider__title {
+  @media (min-width: $desktop-width) {
+    bottom: 0;
+    top: 46px;
+  }
+}
+
+.slider__content:hover .slider__skills {
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

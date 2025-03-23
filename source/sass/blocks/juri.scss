@@ -1,16 +1,16 @@
 .juri__wrapper {
   @include wrapper__size;
-  padding: 40px 30px;
+    padding: 40px 30px;
 
- @media (min-width: $tablet-width) {
-   width: $tablet-width;
-   padding: 30px 45px 60px;
- }
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 30px 45px 60px;
+  }
 
- @media (min-width: $desktop-width) {
-   width: $desktop-width;
-   padding: 100px 48px;
- }
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    padding: 100px 48px;
+  }
 }
 
 .juri__title {
