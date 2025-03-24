@@ -1,17 +1,20 @@
-.offers {
-  //overflow: hidden;
-}
-
-.offers__title {
+.offers__wrapper {
+  padding-top: 40px;
   padding-bottom: 40px;
 }
 
+.offers__title {
+  margin-bottom: 40px;
+}
+
 .offers__price {
-  padding: 30px 0;
+  padding: 30px 0 36px;
   text-align: center;
   background-color: $color-banner;
   color: $color-base-white;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 
   /*&::after,
   &::before {
@@ -44,6 +47,7 @@
   font-weight: 700;
   font-size: 64px;
   line-height: 64px;
+  margin-bottom: 28px;
   width: 260px;
 }
 
@@ -51,19 +55,32 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 20px;
-  margin: 28px auto;
+  margin: 0 auto;
   width: 260px;
 }
 
 .offers__button {
-  padding: 0 0 5px;
+  padding: 0;
+  margin: 0 auto;
   color: $color-base-white;
   font-weight: 700;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
   border: none;
-  border-bottom: 1px solid $color-base-white;
+  position: relative;
+  //width: min-content;
+  //border-bottom: 1px solid $color-base-white;
+
+   &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background-color: $color-base-white;
+  }
 }
 
 .offers__button:hover {
@@ -72,17 +89,20 @@
 
 .offers__button:focus {
   outline: 1px solid $color-base-white;
-  padding: 10px;
+  outline-offset: 10px;
   border: none;
+
+  &::after {
+    display: none;
+  }
 }
 
 .offers__button:active {
   color: $color-base-white;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid $color-base-white;
+  outline: none;
   opacity: 1;
-  padding: 0 0 5px;
 }
 
 .offers__button:disabled {
@@ -93,11 +113,12 @@
   display: block;
   width: 100%;
   height: auto;
+  margin-bottom: 40px
 }
 
 .offers__card {
   @include wrapper__size;
-  padding: 40px 15px;
+  padding: 0 15px;
 
  @media (min-width: $tablet-width) {
    //justify-content: center;
@@ -127,7 +148,7 @@
 }
 
 .offers__content {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .offers__content h3 {
@@ -147,6 +168,7 @@
 }
 
 .offers__button--dark {
+  padding-bottom: 2px;
   color: $color-background-dark;
   border-bottom: 1px solid #74819c;
   align-self: center;
@@ -164,6 +186,7 @@
 .offers__button--dark:active {
   color: $color-background-dark;
   border: none;
+  outline: none;
   border-bottom: 1px solid $color-background-dark;
 }
 
