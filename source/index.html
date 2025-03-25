@@ -450,20 +450,45 @@
 
     <section class="reviews" data-test="reviews">
       <div class="reviews__wrapper">
-        <h2 class="reviews__title title">Отзовы</h2>
-        <div class="reviews__item">
-          <div class="reviews__image-wrapper">
-            <img src="img/user-1.jpg" alt="" width="50" height="50">
+        <h2 class="reviews__title title">Отзывы</h2>
+        <div class="reviews__container">
+          <div class="reviews__swiper swiper">
+            <div class="reviews__slider swiper-wrapper">
+              <div class="reviews__slide swiper-slide">
+                <div class="reviews__image-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" width="80" height="80" srcset="img/user@1x.webp 1x, img/user@2x.webp 2x">
+                    <source type="image/webp" width="80" height="80" srcset="img/user@1x.webp 1x, img/user@2x.webp 2x">
+                    <source media="(min-width: 768px)" width="400" height="462" type="image/jpeg" srcset="img/offers-tablet@1x.jpg 1x, img/offers-tablet@2x.jpg 2x">
+                    <img src="img/user@1x.jpg" width="68" height="68" srcset="img/user@2x.jpg 2x" alt="Фото посетителя">
+                  </picture>
+                </div>
+                <h3>Анна Орлова</h3>
+                <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+              </div>
+              <div class="reviews__slide swiper-slide">
+                <div class="reviews__image-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" width="80" height="80" srcset="img/user@1x.webp 1x, img/user@2x.webp 2x">
+                    <source type="image/webp" width="80" height="80" srcset="img/user@1x.webp 1x, img/user@2x.webp 2x">
+                    <source media="(min-width: 768px)" width="400" height="462" type="image/jpeg" srcset="img/offers-tablet@1x.jpg 1x, img/offers-tablet@2x.jpg 2x">
+                    <img src="img/user@1x.jpg" width="68" height="68" srcset="img/user@2x.jpg 2x" alt="Фото посетителя">
+                  </picture>
+                </div>
+                <h3>Анастия Петрова</h3>
+                <p> «Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+              </div>
+            </div>
+
           </div>
-          <h3>Анна Орлова</h3>
-          <p> «Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
-        </div>
-        <div class="reviews__item">
-          <div class="reviews__image-wrapper">
-            <img src="img/user-1.jpg" alt="" width="50" height="50">
+          <div class="reviews__buttons">
+            <button class="reviews__button reviews__button-next button swiper-button-next" type="button">
+              <span class="visually-hidden">Следующий отзыв</span>
+            </button>
+            <button class="reviews__button reviews__button-prev button swiper-button-prev" type="button">
+              <span class="visually-hidden">Предыдущий отзыв</span>
+            </button>
           </div>
-          <h3>Анна Орлова</h3>
-          <p> «Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
         </div>
       </div>
     </section>
@@ -473,15 +498,17 @@
         <div class="form__container">
         <h2 class="form__title title">Бесплатное занятие</h2>
         <form class="form__group" action="https://echo.htmlacademy.ru" method="post">
+
           <div class="form__content">
             <label for="name"></label>
             <input class="form__field" aria-label="Имя" type="text" id="name" name="name" placeholder="Имя" required>
               <!-- При ошибке валидации добавить к классу .form__content класс .form__error -->
           </div>
           <div class="form__content">
-            <label class="form__label" for="phone"></label>
+            <label for="phone"></label>
             <input class="form__field" aria-label="Телефон" type="tel" id="phone" name="phone" pattern="^\[1-9]{10}$" placeholder="Телефон" required>
             <!-- При ошибке валидации добавить к классу .form__content класс .form__error -->
+
           </div>
           <button class="form__button button" type="submit">Отправить</button>
         </form>
@@ -496,7 +523,7 @@
                 <p class="contacts__text">г. Омск, ул. 60 лет Октября, 7</p>
               </address>
             </li>
-            <li class="contacts__item">
+            <li class="contacts__item contacts__item--shedule">
               <h3 class="contacts__name">График работы:</h3>
               <p class="contacts__text">Пн-Вс: с 8:00 до 22:00</p>
             </li>
@@ -507,7 +534,7 @@
               </a>
             </li>
             <li class="contacts__item">
-              <h3 class="contacts__name">E-mail:</h3>
+              <h3 class="contacts__name">Email:</h3>
               <a class="contacts__link" href="mailto:oмск@supergym.ru">
                 <p class="contacts__text">oмск@supergym.ru</p>
               </a>

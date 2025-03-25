@@ -2,18 +2,20 @@ import Swiper from './vendor/swiper.mjs';
 import Mousewheel from './vendor/modules/mousewheel.min.mjs';
 import Navigation from './vendor/modules/navigation.min.mjs';
 
-new Swiper('.juri__swiper', {
+new Swiper('.reviews__swiper', {
   modules: [Navigation, Mousewheel],
 
   direction: 'horizontal',
-  loop: true,
   grabCursor: 'pointer',
   watchOverflow: true,
   centeredSides: false,
 
+  slidesPerView: 1,
+  spaceBetween: 40,
+
   navigation: {
-    nextEl: '.juri__button-next',
-    prevEl: '.juri__button-prev',
+    nextEl: '.reviews__button-next',
+    prevEl: '.reviews__button-prev',
   },
 
   mousewheel: {
@@ -23,21 +25,4 @@ new Swiper('.juri__swiper', {
   // el: '.swiper-scrollbar',
   //},
 
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      initialSlide: 0,
-      simulateTouch: true,
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 40,
-      simulateTouch: false,
-    },
-    1366: {
-      slidesPerView: 4,
-      spaceBetween: 40,
-      simulateTouch: false,
-    }
-  }
 });

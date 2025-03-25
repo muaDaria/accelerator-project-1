@@ -180,6 +180,7 @@
     position: absolute;
     left: 249px;
     bottom: 35px;
+    overflow: hidden;
 
     &::after,
     &::before {
@@ -191,7 +192,8 @@
     &::before {
       width: 270px;
       height: 170px;
-      background-size: cover;
+      background-position: 7px -12px;
+      transform: scale(1.1);
     }
   }
 
@@ -205,6 +207,8 @@
     &::before {
       width: 360px;
       height: 230px;
+      background-position: 0;
+      transform: none;
     }
   }
 }
