@@ -11,12 +11,27 @@
 
   @media (min-width: $tablet-width) {
     width: $tablet-width;
-    padding: 0 20px 30px;
+    padding: 45px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
     width: $desktop-width;
-    padding: 40px 40px 30px;
+    padding: 40px 103px;
+  }
+}
+
+.footer__logo-wrapper img {
+  display: block;
+  width: 100px;
+
+  @media (min-width: $tablet-width) {
+    width: 110px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 130px;
   }
 }
 
@@ -26,13 +41,33 @@
   flex-wrap: wrap;
   column-gap: 35px;
   row-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+    align-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 82px;
+  }
+}
+
+.footer__item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-base-white;
+
+  @media (min-width: $tablet-width) {
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+  }
 }
 
 .footer__link {
   color: $color-base-white;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
   text-decoration: none;
 }
 
@@ -44,6 +79,10 @@
 .footer__link:focus {
   outline: 1px solid $color-base-white;
   outline-offset: 10px;
+}
+
+.footer__link:active {
+  outline: none;
 }
 
 //добавить класс с модификатором --disabled
