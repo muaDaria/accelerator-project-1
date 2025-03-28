@@ -1,10 +1,10 @@
-@mixin list__reset {
+@mixin list-reset {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-@mixin wrapper__size {
+@mixin wrapper-size {
   margin: 0 auto;
   padding: 0 15px;
   width: 320px;

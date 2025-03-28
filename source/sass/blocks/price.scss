@@ -3,7 +3,8 @@
 }
 
 .price__wrapper {
-  @include wrapper__size;
+  @include wrapper-size;
+
   padding: 40px 15px;
 
   @media (min-width: $tablet-width) {

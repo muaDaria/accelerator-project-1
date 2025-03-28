@@ -1,5 +1,6 @@
 .filter {
-  @include list__reset;
+  @include list-reset;
+
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
@@ -64,7 +65,6 @@
   &::after {
     background-color: #787878;
   }
-
 }
 
 .filter__button:focus {

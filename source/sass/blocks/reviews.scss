@@ -1,5 +1,6 @@
 .reviews__wrapper {
-  @include wrapper__size;
+  @include wrapper-size;
+
   padding: 40px;
 
   @media (min-width: $tablet-width) {
@@ -34,8 +35,21 @@
 }
 
 .reviews__swiper {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    margin: 0 -40px;
+    transition: transform 0.7s;
+    box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+  }
+
   @media (min-width: $tablet-width) {
     width: 500px;
+
   }
 
   @media (min-width: $desktop-width) {
@@ -53,8 +67,8 @@
   text-align: center;
   color: $color-base-white;
   background-color: $color-background-dark;
-  box-shadow: 0px 0px 40px 0px rgba(28, 51, 116, 0.2);
   height: auto;
+
 
   @media (min-width: $tablet-width) {
     padding: 40px 30px;
@@ -64,7 +78,7 @@
     column-gap: 40px;
     row-gap: 20px;
     text-align: left;
-}
+  }
 
   @media (min-width: $desktop-width) {
     column-gap: 30px;
@@ -86,10 +100,6 @@
     width: 80px;
     height: 80px;
     margin-bottom: 0;
-}
-
-  @media (min-width: $desktop-width) {
-
   }
 }
 
@@ -112,10 +122,6 @@
     margin-bottom: 0;
     font-size: 22px;
     line-height: 22px;
-}
-
-  @media (min-width: $desktop-width) {
-
   }
 }
 
@@ -127,10 +133,6 @@
     grid-row: 2/3;
     font-size: 16px;
     line-height: 24px;
-}
-
-  @media (min-width: $desktop-width) {
-
   }
 }
 
@@ -222,7 +224,7 @@
   color: $color-base-white;
 
   &::after {
-    background-color:  $color-base-black;
+    background-color: $color-base-black;
     border-radius: 50%;
     width: 50px;
     height: 50px;

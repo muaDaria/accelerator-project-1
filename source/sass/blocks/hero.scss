@@ -3,7 +3,8 @@
 }
 
 .hero__wrapper {
-  @include wrapper__size;
+  @include wrapper-size;
+
   padding-bottom: 32px;
 
   @media (min-width: $tablet-width) {
@@ -180,7 +181,8 @@
 }
 
 .hero__list {
-  @include list__reset;
+  @include list-reset;
+
   grid-column: 1/2;
   grid-row: 1/3;
   align-self: end;

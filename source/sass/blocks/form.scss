@@ -1,5 +1,6 @@
 .form__wrapper {
-  @include wrapper__size;
+  @include wrapper-size;
+
   padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
@@ -83,14 +84,14 @@
     row-gap: 35px;
   }
 
-   @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     width: 477px;
   }
 }
 
 .form__content {
   @media (min-width: $tablet-width) {
-   width: 205px;
+    width: 205px;
   }
 
   @media (min-width: $desktop-width) {
@@ -125,11 +126,11 @@
   opacity: 0.4;
 }
 
-/*.form__error {
+/* .form__error {
   border-bottom: 1px solid $color-error;
   color: $color-error;
   font-weight: 400;
-}*/
+} */
 
 .form__button {
   color: $color-base-white;
@@ -141,11 +142,7 @@
     padding-top: 25px;
     padding-bottom: 25px;
     width: 100%;
-   }
-
-   @media (min-width: $desktop-width) {
-    //width: 100%;
-   }
+  }
 }
 
 .form__button:hover {
@@ -178,9 +175,9 @@
   @media (min-width: $tablet-width) {
     padding-top: 60px;
     padding-bottom: 60px;
-   }
+  }
 
-   @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 60px 0 60px 103px;
-   }
+  }
 }

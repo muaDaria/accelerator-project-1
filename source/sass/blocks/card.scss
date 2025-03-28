@@ -1,5 +1,6 @@
 .card {
-  @include list__reset;
+  @include list-reset;
+
   display: flex;
   flex-direction: column;
   gap: 35px;
@@ -14,12 +15,13 @@
       content: "";
       width: 275px;
       height: 328px;
-      background-image: image-set(
-        url("../../img/price@1x.png") 1x,
-        url("../../img/price@2x.png") 2x,
-        url("../../img/price@1x.webp") 1x,
-        url("../../img/price@2x.webp") 2x,
-      );
+      background-image:
+        image-set(
+          url("../../img/price@1x.png") 1x,
+          url("../../img/price@2x.png") 2x,
+          url("../../img/price@1x.webp") 1x,
+          url("../../img/price@2x.webp") 2x,
+        );
       background-repeat: no-repeat;
       background-size: cover;
       transform: rotate(150deg);
@@ -60,26 +62,6 @@
     gap: 17px;
     width: 360px;
   }
-}
-
-.card__item:hover {
-  border: 7px solid transparent;
-  border-image-source: $color-focus-card;
-  border-image-slice: 1;
-  padding: 43px 35px;
-
-  @media (min-width: $tablet-width) {
-    padding: 58px;
-  }
-}
-
-.card__item:hover .card__button {
-  background: $color-hover-gradient;
-  color: $color-base-white;
-  border: none;
-  width: 100%;
-  padding-top: 27px;
-  padding-bottom: 27px;
 }
 
 .card__title {
@@ -159,17 +141,51 @@
   width: 100%;
 }
 
-.card__button:focus {
+.card__item:hover {
+  border: 7px solid transparent;
+  border-image-source: $color-focus-card;
+  border-image-slice: 1;
+  padding: 43px 35px;
+
+  @media (min-width: $tablet-width) {
+    padding: 58px;
+  }
+}
+
+.card__item:hover .card__button {
   background: $color-hover-gradient;
-  opacity: 0.8;
+  color: $color-base-white;
+  border: none;
+  width: 195px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+
+.card__button:focus,
+.card__button:hover {
+  background: $color-hover-gradient;
+  color: $color-base-white;
+  border: none;
+  width: 195px;
   padding-top: 27px;
   padding-bottom: 27px;
   outline: none;
 }
 
-.card__button:active {
+.card__item:has(.card__button:focus ) {
+  border: 7px solid transparent;
+  border-image-source: $color-focus-card;
+  border-image-slice: 1;
+  padding: 43px 35px;
+
+  @media (min-width: $tablet-width) {
+    padding: 58px;
+  }
+}
+
+.card__item:hover .card__button:active {
   color: rgba(255, 255, 255, 0.7);
-  background-color: $color-hover-gradient;
+  background: $color-hover-gradient;
   opacity: 1;
 }
 

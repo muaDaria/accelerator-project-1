@@ -113,9 +113,6 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 40px;
   }
-
-  @media (min-width: $desktop-width) {
-  }
 }
 
 .offers__price p {
@@ -144,10 +141,9 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 156px;
   }
-
 }
 
-.offers__price p:not(:last-child){
+.offers__price p:not(:last-child) {
   margin-bottom: 8px;
 }
 
@@ -161,10 +157,8 @@
   text-transform: uppercase;
   border: none;
   position: relative;
-  //width: min-content;
-  //border-bottom: 1px solid $color-base-white;
 
-   &::after {
+  &::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -177,9 +171,6 @@
   @media (min-width: $tablet-width) {
     margin: 0;
     align-self: flex-start;
-  }
-
-  @media (min-width: $desktop-width) {
   }
 }
 
@@ -225,21 +216,18 @@
     margin-bottom: 0;
     height: 100%;
   }
-
-  @media (min-width: $desktop-width) {
-
-  }
 }
 
 .offers__card {
-  @include wrapper__size;
+  @include wrapper-size;
+
   padding: 0 15px;
 
- @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     width: 678px;
     margin: 0;
     padding: 0;
- }
+  }
 
   @media (min-width: $desktop-width) {
     align-self: flex-end;
@@ -247,7 +235,8 @@
 }
 
 .offers__list {
-  @include list__reset;
+  @include list-reset;
+
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -307,11 +296,6 @@
     line-height: 26px;
     margin-bottom: 10px;
   }
-
-  @media (min-width: $desktop-width) {
-    //justify-content: start;
-    //padding-top: 20px;
-  }
 }
 
 .offers__content p {
@@ -321,14 +305,9 @@
     font-size: 16px;
     line-height: 24px;
   }
-
-  @media (min-width: $desktop-width) {
-    //justify-content: start;
-    //padding-top: 20px;
-  }
 }
 
-.offers__item p:not(:last-child){
+.offers__item p:not(:last-child) {
   margin-bottom: 8px;
 }
 
@@ -336,15 +315,6 @@
   padding-bottom: 2px;
   color: $color-background-dark;
   border-bottom: 1px solid #74819c;
-
-  @media (min-width: $tablet-width) {
-
-  }
-
-  @media (min-width: $desktop-width) {
-    //justify-content: start;
-    //padding-top: 20px;
-  }
 }
 
 .offers__button--dark:hover {

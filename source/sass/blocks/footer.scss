@@ -3,7 +3,8 @@
 }
 
 .footer__wrapper {
-  @include wrapper__size;
+  @include wrapper-size;
+
   padding: 40px 15px;
   display: flex;
   flex-direction: column;
@@ -36,7 +37,8 @@
 }
 
 .footer__list {
-  @include list__reset;
+  @include list-reset;
+
   display: flex;
   flex-wrap: wrap;
   column-gap: 35px;
@@ -60,9 +62,6 @@
 
   @media (min-width: $tablet-width) {
     line-height: 22px;
-  }
-
-  @media (min-width: $desktop-width) {
   }
 }
 

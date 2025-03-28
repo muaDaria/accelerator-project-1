@@ -1,5 +1,6 @@
 .faq__wrapper {
-  @include wrapper__size;
+  @include wrapper-size;
+
   padding: 70px 15px;
 
   @media (min-width: $tablet-width) {
@@ -39,7 +40,8 @@
 }
 
 .faq__topic-list {
-  @include list__reset;
+  @include list-reset;
+
   display: grid;
   grid-template-columns: repeat(2, 140px);
   gap: 10px;
@@ -70,9 +72,6 @@
     padding-bottom: 18px;
     font-size: 18px;
     line-height: 18px;
-  }
-
-  @media (min-width: $desktop-width) {
   }
 }
 
@@ -137,19 +136,9 @@
 .faq__questions-item {
   padding: 20px 0;
   border-top: 1px solid #74819c;
-  transition: 0.3s;
+  transition: 0.5s;
   overflow: hidden;
   position: relative;
-
-    /*&::before {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 1px;
-      background-color: #74819c;
-      left: 0;
-      top: 0;
-    }*/
 
   @media (min-width: $tablet-width) {
     padding: 33px 0 31px;
@@ -180,6 +169,12 @@
   }
 }
 
+.faq__questions-item:last-child[open] {
+  @media (min-width: $tablet-width) {
+    padding-bottom: 82px;
+  }
+}
+
 .faq__questions-item summary {
   font-weight: 400;
   font-size: 20px;
@@ -203,7 +198,7 @@
     height: 1px;
     content: "";
     position: absolute;
-    transition: transform .5s;
+    transition: transform 0.5s;
   }
 
   &::after {
@@ -216,31 +211,26 @@
     line-height: 22px;
     padding-right: 95px;
 
-    @media (min-width: $tablet-width) {
-      &::before,
-      &::after {
-        width: 20px;
-        left: 648px;
-      }
-    }
-
-    @media (min-width: $desktop-width) {
-      font-size: 24px;
-      line-height: 24px;
-
-      &::before,
-      &::after {
-        width: 20px;
-        left: 830px;
-      }
+    &::before,
+    &::after {
+      width: 20px;
+      left: 648px;
     }
   }
 
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 24px;
+
+    &::before,
+    &::after {
+      left: 830px;
+    }
+  }
 }
 
 .faq__questions-item summary:focus {
   outline: 0;
-  box-shadow: inset 0 0 1px $color-base-black, inset 0 0 2px $color-base-black;
   color: $color-text-secondary;
 }
 
@@ -255,7 +245,6 @@
     margin-bottom: 31px;
   }
 }
-
 
 .faq__questions-item[open] > summary::after {
   transform: rotateZ(180deg);
@@ -317,7 +306,7 @@
   }
 }
 
-.faq__questions-item p:not(:last-child){
+.faq__questions-item p:not(:last-child) {
   margin-bottom: 8px;
 }
 

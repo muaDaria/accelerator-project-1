@@ -1,5 +1,6 @@
 .social__list {
-  @include list__reset;
+  @include list-reset;
+
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
