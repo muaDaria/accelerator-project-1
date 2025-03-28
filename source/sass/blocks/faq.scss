@@ -86,17 +86,13 @@
     padding-top: 19px;
     padding-bottom: 19px;
   }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 18px;
-    padding-bottom: 18px;
-  }
 }
 
 .faq__topic-button:hover,
 .faq__topic-button:focus {
   color: $color-base-black;
   border: 1px solid $color-base-black;
+  outline: none;
 }
 
 .faq__topic-button:active {
@@ -116,15 +112,14 @@
   border: 1px solid rgba(16, 38, 84, 0.2);
 }
 
-.faq__topic-button--active:focus {
-  color: $color-base-white;
-  padding: 14px 20px;
-  border: 1px solid $color-base-black;
-}
-
+.faq__topic-button--active:focus,
 .faq__topic-button--active:hover {
-  border: none;
-  color: $color-base-white;
+  padding: 14px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 18px 20px;
+    border: 1px solid $color-base-black;
+  }
 }
 
 .faq__accordion {
@@ -229,9 +224,29 @@
   }
 }
 
-.faq__questions-item summary:focus {
+.faq__questions-item summary:focus,
+.faq__questions-item summary:hover {
   outline: 0;
   color: $color-text-secondary;
+
+  &::before,
+  &::after {
+    background-color: $color-base-white;
+  }
+}
+
+.faq__questions-item summary:focus span {
+
+  &::before {
+    background-color: #74819c;
+  }
+}
+
+.faq__questions-item summary:hover span {
+
+  &::before {
+    background-color: $color-background-dark;
+  }
 }
 
 .faq__questions-item[open] summary {
@@ -249,6 +264,11 @@
 .faq__questions-item[open] > summary::after {
   transform: rotateZ(180deg);
   background-color: $color-base-white;
+}
+
+.faq__questions-item summary:disabled {
+  background-color: $color-base-black;
+  opacity: 0.3;
 }
 
 .faq__questions-item span {

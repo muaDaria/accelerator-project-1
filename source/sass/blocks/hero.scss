@@ -237,6 +237,7 @@
   color: $color-base-black;
   background-color: $color-base-white;
   opacity: 1;
+  border: 2px solid $color-base-white;
 }
 
 button:disabled {
