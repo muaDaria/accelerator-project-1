@@ -64,10 +64,12 @@
   font-size: 22px;
   color: $color-base-white;
   text-decoration: none;
+  max-width: 150px;
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
     line-height: 24px;
+    max-width: 500px;
   }
 
   @media (min-width: $desktop-width) {

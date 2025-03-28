@@ -51,6 +51,8 @@
 
   @media (min-width: $desktop-width) {
     gap: 82px;
+    row-gap: 20px;
+    align-content: flex-start;
   }
 }
 
@@ -91,4 +93,10 @@
   pointer-events: none;
   cursor: default;
   opacity: 0.4;
+}
+
+.footer__social {
+  @media (min-width: $tablet-width) {
+    min-width: 105px;
+  }
 }

@@ -92,6 +92,7 @@
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 10px;
+  background-color: $color-text-secondary;
 
   @media (min-width: $tablet-width) {
     grid-column: 1/2;
@@ -106,6 +107,7 @@
   object-fit: contain;
   object-position: -2px 9px;
   transform: scale(1.6);
+  text-indent: -100vw;
 }
 
 .reviews__slide h3 {
