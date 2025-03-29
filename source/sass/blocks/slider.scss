@@ -39,7 +39,7 @@
     margin-right: -35px;
     background-color: $color-base-black;
     opacity: 0.17;
-    box-shadow: 0px 0px 35px rgba(42, 59, 99, 0.17);
+    box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
   }
 }
 
@@ -74,7 +74,25 @@
   gap: 12px;
   max-width: 160px;
   max-height: 130px;
-  overflow-y: scroll;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 7px;
+    background-color: $color-background-light;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-text-secondary;
+    opacity: 0.4;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #f9f9fd;
+    border-radius: 10px;
+  }
 }
 
 .slider__skills-item {

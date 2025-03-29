@@ -20,6 +20,7 @@
 
 .about__container {
   @include wrapper-size;
+
   padding: 0 15px;
 
   @media (min-width: $tablet-width) {

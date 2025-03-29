@@ -43,6 +43,7 @@
     width: 100%;
     height: 100%;
     margin: 0 -40px;
+    padding: 0 40px;
     transition: transform 0.7s;
     box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
   }
@@ -150,12 +151,12 @@
 }
 
 
-.reviews__slide:hover  {
+.reviews__slide:hover {
   opacity: 0.8;
 }
 
 .reviews__slide:focus-visible {
-  outline: 1x solid $color-text-secondary;
+  outline: 2px solid $color-text-secondary;
 }
 
 .reviews__button {

@@ -8,7 +8,7 @@ new Swiper('.reviews__swiper', {
   direction: 'horizontal',
   grabCursor: 'pointer',
   watchOverflow: true,
-  centeredSides: false,
+  centeredSides: true,
 
   slidesPerView: 1,
   spaceBetween: 40,

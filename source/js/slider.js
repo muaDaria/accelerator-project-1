@@ -19,9 +19,6 @@ new Swiper('.juri__swiper', {
   mousewheel: {
     forceToAxis: true,
   },
-  //scrollbar: {
-  // el: '.swiper-scrollbar',
-  //},
 
   breakpoints: {
     320: {

@@ -195,6 +195,7 @@
     content: "";
     position: absolute;
     transition: transform 0.5s;
+    display: inline-block;
   }
 
   &::after {
@@ -237,14 +238,12 @@
 }
 
 .faq__questions-item summary:focus span {
-
   &::before {
     background-color: #74819c;
   }
 }
 
 .faq__questions-item summary:hover span {
-
   &::before {
     background-color: $color-background-dark;
   }
@@ -273,8 +272,6 @@
 }
 
 .faq__questions-item span {
-  position: relative;
-
   &::before {
     position: absolute;
     content: "";
@@ -286,6 +283,7 @@
     top: 50%;
     z-index: -1;
     transform: translate(-50%, -50%);
+    display: inline-block;
   }
 
   @media (min-width: $tablet-width) {

@@ -173,7 +173,7 @@
   outline: none;
 }
 
-.card__item:has(.card__button:focus ) {
+.card__item:has(.card__button:focus) {
   border: 7px solid transparent;
   border-image-source: $color-focus-card;
   border-image-slice: 1;

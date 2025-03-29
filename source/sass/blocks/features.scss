@@ -175,24 +175,17 @@
   @media (min-width: $tablet-width) {
     margin: 0;
     padding: 35px;
-
-    &::after,
-    &::before {
-      width: 320px;
-    }
-
-    &::after {
-      left: 0;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 58px 40px;
+    min-width: 320px;
 
     &::after,
     &::before {
       display: none;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 58px 40px;
+    min-width: 360px;
   }
 }
 
