@@ -16,7 +16,6 @@ const uploadVideo = () => {
   iframe.setAttribute('referrerpolicy', 'trict-origin-when-cross-origin');
   iframe.setAttribute('title', 'YouTube video player');
 
-  videoContainer.innerHTML = '';
   videoContainer.appendChild(iframe);
 };
 
