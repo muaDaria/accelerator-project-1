@@ -145,72 +145,76 @@
   margin: 0 auto;
   position: relative;
 
-  &::after,
+  @media (min-width: $tablet-width) {
+    min-width: auto;
+    width: 270px;
+    height: 170px;
+    position: absolute;
+    left: 249px;
+    bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 360px;
+    height: 230px;
+    left: 503px;
+    bottom: 125px;
+  }
+}
+
+.about__video-image {
+  margin: 0 auto;
+  text-align: center;
+  min-width: 320px;
+  min-height: 170px;
+  position: relative;
+
   &::before {
     content: "";
     position: absolute;
     height: 170px;
     width: 100%;
     top: 0;
-  }
-
-  &::after {
+    left: 0;
     background-color: rgba(20, 54, 122, 0.5);
-    z-index: -1;
-  }
-
-  //imageset
-
-  &::before {
-    background-image: url("../img/video-background@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    z-index: -2;
-
-    @media (resolution >= 2dppx) {
-      background-image: url("../img/video-background@2x.jpg");
-    }
   }
 
   @media (min-width: $tablet-width) {
-    min-width: 270px;
-    min-height: 170px;
-    position: absolute;
-    left: 249px;
-    bottom: 35px;
-    overflow: hidden;
-
-    &::after,
-    &::before {
-      left: 0;
-      top: 0;
-      z-index: 1;
-    }
+    width: 270px;
+    height: 170px;
 
     &::before {
       width: 270px;
-      height: 170px;
-      background-position: 7px -12px;
-      transform: scale(1.1);
     }
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 360px;
-    min-height: 230px;
-    left: 503px;
-    bottom: 125px;
+    width: 360px;
+    height: 230px;
 
-    &::after,
     &::before {
       width: 360px;
       height: 230px;
-      background-position: 0;
-      transform: none;
     }
   }
 }
+
+.about__video-image img {
+  display: block;
+  width: 100%;
+  height: 170px;
+
+  @media (min-width: $tablet-width) {
+    width: 270px;
+    height: 170px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 360px;
+    height: 230px;
+  }
+}
+
 
 .about__play-button {
   position: absolute;
