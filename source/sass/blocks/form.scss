@@ -126,11 +126,10 @@
   opacity: 0.4;
 }
 
-/* .form__error {
-  border-bottom: 1px solid $color-error;
+.form__error {
   color: $color-error;
   font-weight: 400;
-} */
+}
 
 .form__button {
   color: $color-base-white;
@@ -165,7 +164,7 @@
   opacity: 1;
 }
 
-.games__button:disabled {
+.form__button:disabled {
   opacity: 0.5;
 }
 

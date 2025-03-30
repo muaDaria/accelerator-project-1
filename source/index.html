@@ -661,19 +661,23 @@
       <div class="form__wrapper">
         <div class="form__container">
         <h2 class="form__title title">Бесплатное занятие</h2>
-          <form class="form__group" action="https://echo.htmlacademy.ru" method="post">
-            <div class="form__content">
-              <label for="name"></label>
-              <input class="form__field" aria-label="Имя" type="text" id="name" name="name" placeholder="Имя" required>
-                <!-- При ошибке валидации добавить к классу .form__content класс .form__error -->
-            </div>
-            <div class="form__content">
-              <label for="phone"></label>
-              <input class="form__field" aria-label="Телефон" type="tel" id="phone" name="phone" pattern="^\[1-9]{10}$" placeholder="Телефон" required>
-              <!-- При ошибке валидации добавить к классу .form__content класс .form__error -->
-            </div>
-            <button class="form__button button" type="submit">Отправить</button>
-          </form>
+        <form class="form__group" action="https://echo.htmlacademy.ru" method="post">
+          <div class="form__content">
+            <label for="name">
+              <input class="form__field form__field--name" aria-label="Имя" type="text" id="name" name="name"
+                placeholder="Имя" required>
+              <span class="visually-hidden form__error form__error--name">Текст ошибки</span>
+            </label>
+          </div>
+          <div class="form__content">
+            <label for="phone">
+              <input class="form__field form__field--phone" aria-label="Телефон" type="tel" id="phone" name="phone"
+                 placeholder="Телефон" required>
+              <span class="visually-hidden form__error form__error--phone">Текст ошибки</span>
+            </label>
+          </div>
+          <button class="form__button button" type="submit">Отправить</button>
+        </form>
         </div>
 
         <div class="form__contacts contacts">

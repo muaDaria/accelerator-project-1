@@ -4,3 +4,4 @@ import './price.js';
 import './slider.js';
 import './slider-reviews.js';
 import './accordion.js';
+import './form.js';
