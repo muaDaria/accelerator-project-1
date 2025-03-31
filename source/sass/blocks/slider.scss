@@ -40,7 +40,6 @@
   opacity: 1;
   transition: opacity 0.3s ease;
   box-shadow: 0 0 35px 0 rgba(42, 59, 99, 0.17);
-  overflow: hidden;
 }
 
 .slider__skills-speciality {
@@ -95,6 +94,10 @@
     top: 5px;
     z-index: 2;
   }
+}
+
+.slider__content:focus {
+  outline: none;
 }
 
 .slider__content:focus .slider__title {
