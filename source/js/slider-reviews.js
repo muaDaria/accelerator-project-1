@@ -1,6 +1,7 @@
 import Swiper from './vendor/swiper.mjs';
 import Mousewheel from './vendor/modules/mousewheel.min.mjs';
 import Navigation from './vendor/modules/navigation.min.mjs';
+import { Scrollbar } from 'swiper/modules';
 
 const initSliderReviews = () => {
   const sliderElement = document.querySelector('.reviews__swiper');
@@ -9,7 +10,7 @@ const initSliderReviews = () => {
   }
 
   new Swiper('.reviews__swiper', {
-    modules: [Navigation, Mousewheel],
+    modules: [Navigation, Mousewheel, Scrollbar],
 
     direction: 'horizontal',
     grabCursor: 'pointer',

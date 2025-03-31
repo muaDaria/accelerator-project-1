@@ -24,6 +24,7 @@ const initSliderJuri = () => {
 
     mousewheel: {
       forceToAxis: true,
+      releaseOnEdges: true,
     },
 
     breakpoints: {
