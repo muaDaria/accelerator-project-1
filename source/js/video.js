@@ -17,6 +17,7 @@ const uploadVideo = () => {
   iframe.setAttribute('title', 'YouTube video player');
 
   videoContainer.appendChild(iframe);
+  playButton.style.display = 'none';
 };
 
 playButton.addEventListener('click', uploadVideo);

@@ -2,27 +2,32 @@ import Swiper from './vendor/swiper.mjs';
 import Mousewheel from './vendor/modules/mousewheel.min.mjs';
 import Navigation from './vendor/modules/navigation.min.mjs';
 
-new Swiper('.reviews__swiper', {
-  modules: [Navigation, Mousewheel],
+const initSliderReviews = () => {
+  const sliderElement = document.querySelector('.reviews__swiper');
+  if (!sliderElement) {
+    return;
+  }
 
-  direction: 'horizontal',
-  grabCursor: 'pointer',
-  watchOverflow: true,
-  centeredSides: true,
+  new Swiper('.reviews__swiper', {
+    modules: [Navigation, Mousewheel],
 
-  slidesPerView: 1,
-  spaceBetween: 40,
+    direction: 'horizontal',
+    grabCursor: 'pointer',
+    watchOverflow: true,
+    centeredSides: true,
 
-  navigation: {
-    nextEl: '.reviews__button-next',
-    prevEl: '.reviews__button-prev',
-  },
+    slidesPerView: 1,
+    spaceBetween: 40,
 
-  mousewheel: {
-    forceToAxis: true,
-  },
-  //scrollbar: {
-  // el: '.swiper-scrollbar',
-  //},
+    navigation: {
+      nextEl: '.reviews__button-next',
+      prevEl: '.reviews__button-prev',
+    },
 
-});
+    mousewheel: {
+      forceToAxis: true,
+    }
+  });
+};
+
+initSliderReviews();
