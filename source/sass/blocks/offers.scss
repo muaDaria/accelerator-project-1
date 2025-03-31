@@ -196,7 +196,13 @@
   opacity: 1;
 }
 
-.offers__button:disabled {
+
+//добавить класс с модификатором --disabled
+//для отключения ссылки
+
+.offers__button--disabled {
+  pointer-events: none;
+  cursor: default;
   opacity: 0.5;
 }
 

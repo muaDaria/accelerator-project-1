@@ -88,6 +88,11 @@
   }
 }
 
+.games__image-wrapper img {
+  display: block;
+  height: 100%;
+}
+
 .games__button {
   padding-top: 22px;
   padding-bottom: 22px;
@@ -119,12 +124,10 @@
   opacity: 1;
 }
 
-.games__button:disabled {
-  opacity: 0.5;
-  letter-spacing: 0;
-}
-
-.games__image-wrapper img {
-  display: block;
-  height: 100%;
+//добавить класс с модификатором --disabled
+//для отключения ссылки
+.games__button--disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.4;
 }

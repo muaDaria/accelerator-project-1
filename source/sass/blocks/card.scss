@@ -17,10 +17,10 @@
       height: 328px;
       background-image:
         image-set(
-          url("../../img/price@1x.png") 1x,
-          url("../../img/price@2x.png") 2x,
-          url("../../img/price@1x.webp") 1x,
-          url("../../img/price@2x.webp") 2x,
+          url("../../img/price@1x.webp") 1x type("image/webp"),
+          url("../../img/price@2x.webp") 2x type("image/webp"),
+          url("../../img/price@1x.png") 1x type("image/png"),
+          url("../../img/price@2x.png") 2x type("image/png"),
         );
       background-repeat: no-repeat;
       background-size: cover;
@@ -196,6 +196,17 @@
   opacity: 1;
 }
 
-.card__button:disabled {
+
+//добавить класс с модификатором --disabled
+//для отключения ссылки
+
+.card__button--disabled {
   letter-spacing: 0.05em;
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.3;
+}
+
+.card__item--disabled  {
+  pointer-events: none;
 }
